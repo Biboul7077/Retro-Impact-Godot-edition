@@ -15,6 +15,17 @@ config/version="0.1.1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="uid://c0ttka00bsecb"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "orange",
+"res://Assets/Tilesets/": "yellow",
+"res://Data/": "blue",
+"res://Scenes/": "green",
+"res://Scripts/": "purple",
+"res://Scripts/State Machine/": "pink"
+}
+
 [input]
 
 KeyLeft={
