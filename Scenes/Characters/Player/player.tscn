@@ -2,12 +2,22 @@
 
 [ext_resource type="Script" uid="uid://2bibf3vb2em8" path="res://Scripts/State Machine/node_state_machine.gd" id="1_27cb7"]
 [ext_resource type="Script" uid="uid://cffkf77ygq5n2" path="res://Scenes/Characters/Player/player.gd" id="1_fu1fx"]
+[ext_resource type="Texture2D" uid="uid://c0ttka00bsecb" path="res://icon.jpg" id="2_dxcao"]
 [ext_resource type="Script" uid="uid://djm7js0lx2esn" path="res://Scenes/Characters/Player/idle_state.gd" id="2_lyjr2"]
 [ext_resource type="Script" uid="uid://booulrdhgr5r7" path="res://Scenes/Characters/Player/walk_state.gd" id="3_siygm"]
 [ext_resource type="Script" uid="uid://eajkekrjjk7g" path="res://Scenes/Characters/Player/attack_state.gd" id="4_qqvsf"]
 [ext_resource type="Script" uid="uid://befouwo7vb7lr" path="res://Scenes/Characters/Player/dodge_state.gd" id="5_apx8m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_27cb7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dxcao")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_27cb7"]
 
@@ -15,7 +25,9 @@
 script = ExtResource("1_fu1fx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=544938423]
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_27cb7")
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=518877818]
 shape = SubResource("CircleShape2D_27cb7")
