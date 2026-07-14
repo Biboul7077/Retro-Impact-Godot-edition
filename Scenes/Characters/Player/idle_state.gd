@@ -16,6 +16,9 @@ func _on_next_transitions() -> void:
 	
 	if GameInputEvents.is_movement_input():
 		transition.emit("Walk")
+	
+	if GameInputEvents.dodge():
+		transition.emit("Dodge")
 
 
 func _on_enter() -> void:
@@ -23,4 +26,4 @@ func _on_enter() -> void:
 
 
 func _on_exit() -> void:
-	pass
+	animated_sprite_2d.stop()

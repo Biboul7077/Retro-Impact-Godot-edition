@@ -22,3 +22,8 @@ static func use_tool() -> bool:
 	var use_tool_value : bool = Input.is_action_just_pressed("Act")
 	
 	return use_tool_value
+
+static func dodge() -> bool:
+	var dodge_value : bool = Input.is_action_just_pressed("KeyDodge")
+	
+	return dodge_value
