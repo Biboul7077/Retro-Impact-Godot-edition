@@ -3,12 +3,9 @@ extends NodeState
 @export var player: Player
 @export var animated_sprite_2d: AnimatedSprite2D
 @export var speed: int = 180
-@export var distance_dodge: float = 52.0
+@export var distance_dodge: float = 5200.0
 
 var move_distance_remaining: float = distance_dodge
-
-func _ready() -> void:
-	move_distance_remaining = distance_dodge
 
 
 func _on_process(_delta : float) -> void:
@@ -29,7 +26,7 @@ func _on_next_transitions() -> void:
 
 
 func _on_enter() -> void:
-	pass
+	move_distance_remaining = distance_dodge
 
 
 func _on_exit() -> void:
