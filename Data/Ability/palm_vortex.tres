@@ -7,4 +7,5 @@
 script = ExtResource("1_jtave")
 spell_name = "Palm Vortex"
 description = "Grasping the wind's might, you form a vortex of vacuum in your palm."
+effects = Array[ExtResource("1_daqq7")]([null])
 metadata/_custom_type_script = "uid://bkgmfhbhussbu"
