@@ -1,12 +1,13 @@
 class_name Skill
 extends Resource
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+## --- Metadata ---
+@export_group("Metadata")
+@export var spell_name: String
+@export var description: String
+@export var icon: Texture2D
+@export var prereqs: Array[Prereq] = []
+ 
+## --- Effects ---
+@export_group("Effects")
+@export var effects: Array[ExecutionEntry] = []
